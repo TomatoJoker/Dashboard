@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="small-graph__history">
-                                    <h3 class="small-graph__percent h2-title">59,47%</h3>
+                                    <h3 class="small-graph__percent">59,47 <span>%</span></h3>
                                     <div class="small-graph__history-details">
                                         <svg class="icon" width="16" height="16">
                                             <use href="./i/sprite.svg#people"></use>
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                         {% endcall %}
-                        {% call macros.card('RLQ', 'card--bottom-pading dashboard__card', iconUrl) %}
+                        {% call macros.card('MZI', 'card--bottom-pading dashboard__card', iconUrl) %}
                             <div class="circle-range-mood">
                                 <div class="circle-range-mood__wrapper">
                                     <img class="circle-range-mood__icon circle-range-mood__icon--from"
@@ -154,14 +154,14 @@
                                     </div>
                                     {% set statisticsSurvey = {
                                         'A': '4.5',
-                                        'B': '1.9',
-                                        'C': '2.3',
+                                        'B': '1.3',
+                                        'C': '1.9',
                                         'D': '4.5',
                                         'E': '0.5',
                                         'F': '4.5',
                                         'G': '4.5',
-                                        'H': '1.9',
-                                        'I': '1.4',
+                                        'H': '1.3',
+                                        'I': '1.3',
                                         'J': '4.5',
                                         'K': '0.5',
                                         'L': '4.5'
@@ -218,7 +218,7 @@
                                         {% endfor %}
                                     </ul>
                                     <ul class="graph__history">
-                                        {% for i in range(1, 6) %}
+                                        {% for i in range(1, 7) %}
                                             <li class="graph__history-item">
                                                 <div class="graph__square graph--style-{{ loop.index }}"></div>
                                                 <div class="graph__label">KP {{ loop.index }}</div>

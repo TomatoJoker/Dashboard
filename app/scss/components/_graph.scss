@@ -1,6 +1,7 @@
 .graph {
   position: relative;
   z-index: 1;
+  padding-top: 17px;
   $negative-padding: 6px;
 
   @include media($small-table) {
@@ -16,8 +17,7 @@
   }
 
   &__grid,
-  &__statistics-row,
-  &__history {
+  &__statistics-row {
     padding-left: 24px;
   }
 
@@ -89,6 +89,30 @@
     border-radius: 6px 6px 0px 0px;
   }
 
+  &__col-label {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  &__history {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  &__history-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $dark;
+  }
+
+  &__square {
+    border-radius: 4px;
+    @include size(12);
+  }
+
   &--style-1 {
     background: $chart1;
   }
@@ -109,28 +133,8 @@
     background: $chart5;
   }
 
-  &__col-label {
-    text-align: center;
-    margin-top: 8px;
-  }
-
-  &__history {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  &__history-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 24px;
-    color: $dark;
-  }
-
-  &__square {
-    border-radius: 4px;
-    @include size(12);
+  &--style-6 {
+    background: rgba($dark, 0.4);
   }
 
   &--large-bar {
@@ -138,9 +142,8 @@
     .graph {
 
       &__grid,
-      &__statistics-row,
-      &__history {
-        padding-left: 40px;
+      &__statistics-row {
+        padding-left: 50px;
       }
 
       &__bar {

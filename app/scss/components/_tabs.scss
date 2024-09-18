@@ -25,6 +25,7 @@
     border: 1px solid $transparent;
     font-weight: 500;
     line-height: 1.14;
+    letter-spacing: -.08em;
 
     @include media($tablet-pro) {
       justify-content: center;

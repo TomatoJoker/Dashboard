@@ -10,13 +10,13 @@
 /*=======================START-MEDIA=====================*/
 /*=======================END-MEDIA=====================*/
 /* media breakpoint mixin */
-h1, .h1-title, h2, .h2-title {
+h1, .h1-title {
   font-size: 32px;
   line-height: 1;
   color: #222531;
 }
 
-h1, .h1-title, h2, .h2-title {
+h2, .h2-title {
   font-size: 20px;
   line-height: 1.2;
   color: #222531;
