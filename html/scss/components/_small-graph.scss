@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 0;
     padding-left: $padding-card;
-    padding-right: $padding-card;
+    padding-right: calc(#{$padding-card} - 4px);
     top: 0px;
     left: 0px;
   }
@@ -66,12 +66,12 @@
   }
 
   &__history {
-    padding: 10px $padding-card 16px;
+    padding: 10px $padding-card 13px;
     background: $graph;
     color: $light;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -81,12 +81,20 @@
 
   &__percent {
     color: inherit;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+
+    span {
+      font-size: 14px;
+    }
   }
 
   &__history-details {
     display: flex;
     align-items: center;
     gap: 4px;
+    letter-spacing: -0.06em;
   }
 
 }

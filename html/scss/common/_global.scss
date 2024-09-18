@@ -38,7 +38,7 @@ h1, .h1-title {
 }
 
 h2, .h2-title {
-  @extend %h1-title;
+  @extend %h2-title;
 }
 
 .wrapper {

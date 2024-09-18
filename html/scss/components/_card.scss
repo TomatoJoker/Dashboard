@@ -28,8 +28,7 @@
   $padding-list-wrapper: #{$padding-card} - 7px;
 
   &__list {
-    padding-top: $padding-list-item;
-    padding-bottom: 5px;
+    margin-top: 25px;
     max-height: 136px;
     overflow: auto;
     padding-left: 17px;
@@ -51,7 +50,7 @@
   }
 
   &__item {
-    padding: $padding 0px;
+    padding: calc(#{$padding-list-item} - 2px) 0;
     font-size: 14px;
     line-height: 1.14;
     position: relative;
