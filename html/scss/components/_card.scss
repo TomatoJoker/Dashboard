@@ -1,9 +1,14 @@
 .card {
-  padding: 24px;
+  padding: $padding-card;
   padding-bottom: 0px;
   border-radius: 16px;
   box-shadow: 0 8px 24px 0 rgba(81, 85, 195, 0.08);
   background: $light;
+  overflow: hidden;
+
+  &--bottom-pading {
+    padding-bottom: $padding-card;
+  }
 
   &__header {
     display: flex;
@@ -17,5 +22,73 @@
 
   &__content {
     margin-top: 16px;
+  }
+
+  $padding-list-item: 16px;
+  $padding-list-wrapper: #{$padding-card} - 7px;
+
+  &__list {
+    padding-top: $padding-list-item;
+    padding-bottom: 5px;
+    max-height: 136px;
+    overflow: auto;
+    padding-left: 17px;
+    padding-right: calc(#{$padding-list-wrapper});
+    width: calc(100% + (#{$padding-list-wrapper}));
+
+    & {
+      scrollbar-color: $scroll-bar $light;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $scroll-bar;
+      border-radius: 8px;
+    }
+  }
+
+  &__item {
+    padding: $padding 0px;
+    font-size: 14px;
+    line-height: 1.14;
+    position: relative;
+    list-style: upper-latin;
+
+    &:after,
+    &:before {
+      position: absolute;
+      left: calc(0px - #{$padding-list-item});
+      height: 1px;
+      width: calc(100% + #{$padding-list-item});
+      background: $decor;
+    }
+
+    &:after {
+      content: '';
+      bottom: 0px;
+    }
+
+    &:first-child {
+
+      &:before {
+        top: 0px;
+        content: '';
+      }
+
+    }
+
+  }
+
+  &__item-text {
+    display: inline-block;
+    padding-left: 9px;
+  }
+
+  &__small-graph {
+    margin-left: calc(0px - #{$padding-card});
+    width: calc(100% + #{$padding-card} * 2);
   }
 }

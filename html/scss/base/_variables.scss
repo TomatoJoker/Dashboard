@@ -2,10 +2,12 @@
 $light: #fff;
 $dark: #222531;
 $transparent: rgba(255, 255, 255, 0);
-$cart: #F18C5C;
+$graph: #F18C5C;
 $accent: #4C57FB;
 $text: #616E85;
+$decor: #EFF2F5;
 $blue-light: #ECEDFF;
+$scroll-bar: #D0D6E4;
 $chart1: #5155C3;
 $chart2: #597DBE;
 $chart3: #5F99BB;
@@ -17,6 +19,7 @@ $time-function: ease-in-out;
 
 $tablet: 768;
 $tablet-pro: 1000;
+$desktop: 1200;
 
 :root {
   --speed: #{$speed};
@@ -28,4 +31,5 @@ $tablet-pro: 1000;
 $padding: 20px;
 $desktop-width: 1312px;
 $site-container: $desktop-width + ($padding * 2);
+$padding-card: 24px;
 

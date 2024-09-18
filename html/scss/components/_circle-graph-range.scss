@@ -1,0 +1,23 @@
+.circle-range-graph {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__active-range {
+    display: block;
+    stroke-dasharray: calc(var(--progress) * (224px / 100)) 224px;
+    stroke-dashoffset: 0px;
+    transform: translateY(33%) translateX(-15%) rotate(-112deg);
+    transform-origin: center;
+    color: $graph;
+    stroke: currentColor;
+  }
+
+  &__value-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 110px;
+    width: 100%;
+  }
+
+}

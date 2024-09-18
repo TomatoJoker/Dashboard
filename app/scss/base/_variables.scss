@@ -2,11 +2,12 @@
 $light: #fff;
 $dark: #222531;
 $transparent: rgba(255, 255, 255, 0);
-$cart: #F18C5C;
+$graph: #F18C5C;
 $accent: #4C57FB;
 $text: #616E85;
 $decor: #EFF2F5;
 $blue-light: #ECEDFF;
+$scroll-bar: #D0D6E4;
 $chart1: #5155C3;
 $chart2: #597DBE;
 $chart3: #5F99BB;
@@ -16,6 +17,7 @@ $chart5: #6CDDB1;
 $speed: 300ms;
 $time-function: ease-in-out;
 
+$small-table: 576;
 $tablet: 768;
 $tablet-pro: 1000;
 $desktop: 1200;
@@ -30,4 +32,5 @@ $desktop: 1200;
 $padding: 20px;
 $desktop-width: 1312px;
 $site-container: $desktop-width + ($padding * 2);
+$padding-card: 24px;
 

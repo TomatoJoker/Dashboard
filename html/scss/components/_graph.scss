@@ -1,0 +1,142 @@
+.graph {
+  position: relative;
+  z-index: 1;
+
+  &__grid,
+  &__statistics-row,
+  &__history {
+    padding-left: 24px;
+  }
+
+  &__grid,
+  &__col-top {
+    height: 132px;
+  }
+
+  &__label {
+    font-size: 12px;
+  }
+
+  &__grid {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+  }
+
+  &__grid-label-wrapper {
+    $negative-padding: 6px;
+    position: absolute;
+    left: 0px;
+    top: calc(0px - #{$negative-padding});
+    height: calc(100% + #{$negative-padding} * 2);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  &__grid-label {
+    text-align: right;
+  }
+  
+  &__grid-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__grid-decor-line {
+    width: 100%;
+    height: 1px;
+    background: $decor;
+  }
+
+  &__grid-label {
+
+  }
+
+  &__statistics-row {
+    display: flex;
+    position: relative;
+  }
+
+  &__col {
+    flex-grow: 1;
+  }
+
+  &__col-top {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__bar {
+    margin: 0px auto;
+    width: 16px;
+    background: $graph;
+    height: var(--height);
+    border-radius: 6px 6px 0px 0px;
+  }
+
+  &--style-1 {
+    background: $chart1;
+  }
+
+  &--style-2 {
+    background: $chart2;
+  }
+
+  &--style-3 {
+    background: $chart3;
+  }
+
+  &--style-4 {
+    background: $chart4;
+  }
+
+  &--style-5 {
+    background: $chart5;
+  }
+
+  &__col-label {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  &__history {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__history-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 24px;
+    color: $dark;
+  }
+
+  &__square {
+    border-radius: 4px;
+    @include size(12);
+  }
+
+  &--large-bar {
+
+    .graph {
+
+      &__grid,
+      &__statistics-row,
+      &__history {
+        padding-left: 40px;
+      }
+
+      &__bar {
+        width: 78px;
+      }
+
+    }
+
+  }
+
+}

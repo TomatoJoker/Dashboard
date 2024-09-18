@@ -242,6 +242,10 @@ pre {
   /* 2 */
 }
 
+figure {
+  margin: 0px;
+}
+
 body {
   font-size: 16px;
   -webkit-box-sizing: border-box;

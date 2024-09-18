@@ -37,8 +37,54 @@
   &__grid {
     margin-top: 20px;
 
-    @include min-media($tablet-pro) {
-      margin-top: 32px;
+    @include min-media($tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
+
+    @include min-media($tablet-pro) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @include min-media($desktop) {
+      margin-top: 32px;
+      gap: 32px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+
+    @include media($tablet) {
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+    }
+
+    &--large {
+
+      @include min-media($tablet-pro) {
+
+        @include media($desktop) {
+
+          &:last-child {
+            grid-column: span 3;
+          }
+
+        }
+
+      }
+
+      @include min-media($tablet) {
+        grid-column: span 2;
+      }
+
+    }
+
   }
 }

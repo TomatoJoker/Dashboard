@@ -1,0 +1,18 @@
+.circle-range-mood {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  &__background,
+  &__progress {
+    stop-opacity: 1;
+  }
+
+  &__background {
+    stop-color: $decor;
+  }
+
+  &__progress {
+    stop-color: $accent;
+  }
+}
