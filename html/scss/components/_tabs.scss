@@ -22,16 +22,26 @@
     gap: 8px;
     padding: 10px 24px;
     border-radius: 40px;
-    border: 1px solid $transparent;
+    border-color: $transparent;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: -.08em;
+
+    &,
+    &:focus {
+      border-width: 1px;
+      border-style: solid;
+    }
 
     @include media($tablet-pro) {
       justify-content: center;
     }
 
     @include hover(border-color) {
+      border-color: $accent;
+    }
+
+    &:focus {
       border-color: $accent;
     }
 
@@ -43,8 +53,6 @@
       border-color: $accent;
       background: $accent;
       color: $light;
-
-
     }
   }
 
