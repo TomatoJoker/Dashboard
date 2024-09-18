@@ -1,0 +1,52 @@
+.circle-range-mood {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__background,
+  &__progress {
+    stop-opacity: 1;
+  }
+
+  &__range {
+    z-index: 1;
+  }
+
+  &__background {
+    stop-color: $decor;
+  }
+
+  &__progress {
+    stop-color: $accent;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+
+    &--from,
+    &--to {
+      bottom: -4px;
+      transform: translateY(50%);
+    }
+
+    &--half {
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--from {
+      left: -4px;
+    }
+
+    &--to {
+      right: -4px;
+    }
+  }
+}

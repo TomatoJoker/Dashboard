@@ -1,0 +1,15 @@
+{% macro card(title, class, iconUrl) %}
+    <div class="card{{ ' ' + class if class }}">
+        <div class="card__header">
+            <h2 class="card__title h2-title">{{ title }}</h2>
+            <div title="Some text">
+                <svg class="icon" width="16" height="16">
+                    <use href="{{ iconUrl }}#info"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="card__content">
+            {{ caller() }}
+        </div>
+    </div>
+{% endmacro %}
