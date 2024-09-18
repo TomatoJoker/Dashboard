@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no"/>
   <title>{{ title }}</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="./images/favicon/favicon-32x32.png"/>
-  <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png"/>
-  <link rel="preload" href="/fonts/Montserrat/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="/fonts/Montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin="">
   {% for style in stylesVendor %}
     <link rel="stylesheet" type="text/css" href="./css/vendors/{{ style }}.min.css">
   {% endfor %}
@@ -18,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="./css/{{ stylePage }}.min.css">
 </head>
 <body>
+{% set iconUrl = './i/sprite.svg' %}
 {% block content %}
 {% endblock %}
 
@@ -25,7 +21,5 @@
   <script src="js/{{ script }}.min.js"></script>
 {% endfor %}
 <script src="js/main.js"></script>
-<!-- navigation js -->
-<script src="js/navigation.js"></script>
 </body>
 </html>

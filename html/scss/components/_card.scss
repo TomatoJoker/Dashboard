@@ -1,0 +1,21 @@
+.card {
+  padding: 24px;
+  padding-bottom: 0px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px 0 rgba(81, 85, 195, 0.08);
+  background: $light;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__content {
+    margin-top: 16px;
+  }
+}

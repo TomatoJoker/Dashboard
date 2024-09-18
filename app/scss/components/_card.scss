@@ -1,0 +1,62 @@
+.card {
+  padding: 24px;
+  padding-bottom: 0px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px 0 rgba(81, 85, 195, 0.08);
+  background: $light;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__content {
+    margin-top: 16px;
+  }
+
+  $padding: 16px;
+
+  &__list {
+    padding-top: $padding;
+    padding-bottom: 5px;
+    max-height: 136px;
+    overflow: auto;
+    padding-left: 25px;
+  }
+
+  &__item {
+    padding: $padding 0px;
+    font-size: 14px;
+    line-height: 1.14;
+    position: relative;
+
+    &:after,
+    &:before {
+      position: absolute;
+      left: calc(0px - #{$padding});
+      height: 1px;
+      width: calc(100% + #{$padding});
+      background: $decor;
+    }
+
+    &:after {
+      content: '';
+      bottom: 0px;
+    }
+
+    &:first-child {
+
+      &:before {
+        top: 0px;
+        content: '';
+      }
+
+    }
+
+  }
+}

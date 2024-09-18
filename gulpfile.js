@@ -42,9 +42,9 @@ reload = sync.reload;
 // html task
 const html = () => {
   return gulp.src('app/html/*.+(html|njk|twig)')
-      .pipe(data(function() {
-        return require('./app/html/data/data.json')
-      }))
+      // .pipe(data(function() {
+      //   return require('./app/html/data/data.json')
+      // }))
       .pipe(nunjucks.compile())
       .pipe(gulp.dest('./html'))
       .pipe(reload({stream: true}));

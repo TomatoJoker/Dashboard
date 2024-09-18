@@ -1,0 +1,64 @@
+.dashboard {
+  padding: 32px 0px;
+
+  @include min-media($tablet-pro) {
+    padding: 64px 0px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    @include min-media($tablet-pro) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__title-wrapper {
+
+    @include min-media($tablet-pro) {
+      max-width: 412px;
+    }
+
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+  }
+
+  &__tabs-wrapper {
+    @include media($tablet-pro) {
+      margin-top: 20px;
+    }
+  }
+
+  &__grid {
+    margin-top: 20px;
+
+    @include min-media($tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @include min-media($desktop) {
+      margin-top: 32px;
+      gap: 32px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+
+    @include media($tablet) {
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+    }
+
+  }
+}

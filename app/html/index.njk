@@ -1,15 +1,86 @@
 {% set title = 'Home' %}
-{% set stylePage = 'home' %}
-{% set stylesVendor = ['your-name-vendor-style-name'] %} {#include style vendor#}
+{% set stylePage = 'home-page' %}
 {% extends 'layouts/layout.njk' %}
 {% block content %}
     <div class="wrapper">
-        {% include 'components/header.njk' %}
         <main class="main">
-            <div class="container">
-                Start
-            </div>
+            <section class="dashboard">
+                <div class="container">
+                    <div class="dashboard__row">
+                        <div class="dashboard__title-wrapper">
+                            <h1>Dashboard intro title</h1>
+                            <p class="dashboard__subtitle">Ac vulputate purus semper fusce at. Non dolor in cras.</p>
+                        </div>
+                        <ul class="dashboard__tabs-wrapper tabs">
+                            {% set tabs = [
+                                {
+                                    title: 'Compare',
+                                    icon: 'graph'
+                                },
+                                {
+                                    title: 'Managers',
+                                    icon: 'case',
+                                    active: true
+                                },
+                                {
+                                    title: 'Employees',
+                                    icon: 'people'
+                                }
+                            ] %}
+                            {% for tabInfo in tabs %}
+                                <li>
+                                    <button class="button-full-reset tabs__btn {{ 'tabs__btn--active' if tabInfo.active}}" type="button">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="{{ iconUrl }}#{{ tabInfo.icon }}"></use>
+                                        </svg>
+                                        {{ tabInfo.title }}
+                                    </button>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% macro cardHeader(title) %}
+                        <div class="card__header">
+                            <h2 class="card__title h2-title">{{ title }}</h2>
+                            <div title="Some text">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="{{ iconUrl }}#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    {% endmacro %}
+                    <div class="dashboard__grid">
+                        <div class="dashboard__card card">
+                            {{ cardHeader('RLQ') }}
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            {{ cardHeader('RLQ') }}
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            {{ cardHeader('RLQ') }}
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            {{ cardHeader('Survey Topics') }}
+                            <div class="card__content">
+                                <ul class="card__list">
+                                    {% set list = [
+                                        'Pulvinar iaculis placerat vitae dui',
+                                        'Massa morbi mattis lectus ornare',
+                                        'Diam sem vestibulum purus morbi',
+                                        'Massa morbi mattis lectus ornare'
+                                    ] %}
+                                    {% for listItem in list %}
+                                        <li class="card__item">{{ listItem }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        {% include 'components/footer.njk' %}
     </div>
 {% endblock %}

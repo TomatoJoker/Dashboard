@@ -6,33 +6,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no"/>
   <title>Home</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="./images/favicon/favicon-32x32.png"/>
-  <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png"/>
-  <link rel="preload" href="/fonts/Montserrat/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="/fonts/Montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin="">
-  
-    <link rel="stylesheet" type="text/css" href="./css/vendors/your-name-vendor-style-name.min.css">
   
   <link rel="stylesheet" type="text/css" href="./css/common.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/home.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/home-page.min.css">
 </head>
 <body>
 
+
     <div class="wrapper">
-        
         <main class="main">
-            <div class="container">
-                Start
-            </div>
+            <section class="dashboard">
+                <div class="container">
+                    <div class="dashboard__row">
+                        <div class="dashboard__title-wrapper">
+                            <h1>Dashboard intro title</h1>
+                            <p class="dashboard__subtitle">Ac vulputate purus semper fusce at. Non dolor in cras.</p>
+                        </div>
+                        <ul class="dashboard__tabs-wrapper tabs">
+                            
+                            
+                                <li>
+                                    <button class="button-full-reset tabs__btn " type="button">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./i/sprite.svg#graph"></use>
+                                        </svg>
+                                        Compare
+                                    </button>
+                                </li>
+                            
+                                <li>
+                                    <button class="button-full-reset tabs__btn tabs__btn--active" type="button">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./i/sprite.svg#case"></use>
+                                        </svg>
+                                        Managers
+                                    </button>
+                                </li>
+                            
+                                <li>
+                                    <button class="button-full-reset tabs__btn " type="button">
+                                        <svg class="icon" width="16" height="16">
+                                            <use href="./i/sprite.svg#people"></use>
+                                        </svg>
+                                        Employees
+                                    </button>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="dashboard__grid">
+                        <div class="dashboard__card card">
+                            
+                        <div class="card__header">
+                            <h2 class="card__title h2-title">RLQ</h2>
+                            <div title="Some text">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./i/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            
+                        <div class="card__header">
+                            <h2 class="card__title h2-title">RLQ</h2>
+                            <div title="Some text">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./i/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            
+                        <div class="card__header">
+                            <h2 class="card__title h2-title">RLQ</h2>
+                            <div title="Some text">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./i/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                            <div class="card__content">Test</div>
+                        </div>
+                        <div class="dashboard__card card">
+                            
+                        <div class="card__header">
+                            <h2 class="card__title h2-title">Survey Topics</h2>
+                            <div title="Some text">
+                                <svg class="icon" width="16" height="16">
+                                    <use href="./i/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                            <div class="card__content">
+                                <ul class="card__list">
+                                    
+                                    
+                                        <li class="card__item">Pulvinar iaculis placerat vitae dui</li>
+                                    
+                                        <li class="card__item">Massa morbi mattis lectus ornare</li>
+                                    
+                                        <li class="card__item">Diam sem vestibulum purus morbi</li>
+                                    
+                                        <li class="card__item">Massa morbi mattis lectus ornare</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        
     </div>
 
 
 
 <script src="js/main.js"></script>
-<!-- navigation js -->
-<script src="js/navigation.js"></script>
 </body>
 </html>
